@@ -1,22 +1,25 @@
-class parentclass:
-    def __init__(self,name ,department):
-        self.name=name
-        self.department=department
-    def oop(self):
-        return f"{self.name}{self.department} is good name"
-class child(parentclass):
-    def derved(self):
-        return f"{self.name}{self.department} is good  name"
-object=child("samuel","ernest")
+class cst:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
+    def it(self):
+        print(f"{self.name} {self.age}")
 
-print(object.derved())     
-print(object.oop())        
+class ICT(cst):
+    def __init__(self, name, age):
+        super().__init__(name, age)  # Call the parent class constructor use "super()"
 
-x = len(object.derved())
-print(x )      # Nsamuelernest is goo name
-               #samuelernest is goodname
-               #24
+    def comp(self):
+        print(f"{self.name} {self.age}")
+
+# Create object from child class
+oop = ICT("BAYISHIMIRESAMUEL VS ERINEST GISUBIZO", 20004)
+
+# Call methods
+oop.it()
+oop.comp()
+
                  
 
 
